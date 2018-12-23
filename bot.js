@@ -1,13 +1,11 @@
-client.on('message', message => {
-            if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('$bc')){
- if(!message.author.id === '518170012595388436') return;
-message.channel.sendMessage('جاري ارسال الرسالة لجميع اعضاء البوت |:white_check_mark:')
-client.users.forEach(m =>{
-m.sendMessage(args)
-})
+const Discord = require('discord.js'),
+    bot = new Discord.Client({sisableEveryone: true})
+    console.log("muuuuuuuuute,");
+bot.on('guildMemberAdd', member => {
+const mohamed= member.guild.channels.get("526121967083061248");
+if(!mohamed) return;
+if(mohamed) {
+setTimeout(() => mohamed.send(** Welcome To **DALIDA**  ..♚  **), 4000)
 }
 });
-
-client.login("NTI2MDQ0MDkzNTc5Nzg4MzE4.Dv_c1A.EviQAknm9FUtT1sLpxtEHKgrhs0")
+client.login(process.env.BOT_TOKEN);
